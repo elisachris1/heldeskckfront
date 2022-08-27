@@ -26,10 +26,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Requisitions http
 import { HttpClientModule } from '@angular/common/http';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
