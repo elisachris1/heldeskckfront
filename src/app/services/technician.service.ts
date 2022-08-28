@@ -28,6 +28,10 @@ export class TechinicianService {
   update(techinician: Technician): Observable<Technician>{
     return this.http.put<Technician>(`${API_CONFIG.baseUrl}/technicians/${techinician.id}`, techinician);
   }
+
+  delete(id: any): Observable<Technician>{
+    return this.http.delete<Technician>(`${API_CONFIG.baseUrl}/technicians/${id}`);
+}
   }
 
   
