@@ -16,21 +16,20 @@ export class TechinicianService {
   findById(id: any): Observable<Technician>{
     return this.http.get<Technician>(`${API_CONFIG.baseUrl}/technicians/${id}`);
   }
-
+  
   findAll(): Observable<Technician[]> {
     return this.http.get<Technician[]>(`${API_CONFIG.baseUrl}/technicians`);
   }
 
-  create (technician: Technician): Observable<Technician>{
-    return this.http.post<Technician>(`${API_CONFIG.baseUrl}/technicians`, technician);
+  create(techinician:Technician): Observable<Technician>{
+    return this.http.post<Technician>(`${API_CONFIG.baseUrl}/technicians`, techinician);
   }
 
   update(techinician: Technician): Observable<Technician>{
     return this.http.put<Technician>(`${API_CONFIG.baseUrl}/technicians/${techinician.id}`, techinician);
   }
+  }
 
-  delete(id: any): Observable<Technician>{
-    return this.http.delete<Technician>(`${API_CONFIG.baseUrl}/technicians/${id}`);
-}
+  
 
-}
+ 

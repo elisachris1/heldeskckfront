@@ -25,7 +25,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Requisitions http
-import { HttpClientModule } from '@angular/common/http';
+
 
 //Project
 import { NavComponent } from './components/nav/nav.component';
@@ -35,6 +35,8 @@ import { TechnicianListComponent } from './components/technician/technician-list
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { TechnicianCreateComponent } from './components/technician/technician-create/technician-create.component';
+import { TechnicianUpdateComponent } from './components/technician/technician-update/technician-update.component';
+import {HttpBackend, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -45,7 +47,10 @@ import { TechnicianCreateComponent } from './components/technician/technician-cr
     HeaderComponent,
     TechnicianListComponent,
     LoginComponent,
-    TechnicianCreateComponent
+    TechnicianCreateComponent,
+    TechnicianUpdateComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -74,6 +79,7 @@ import { TechnicianCreateComponent } from './components/technician/technician-cr
     closeButton: true,
     progressBar: true
     }),
+   
    
   ],
   providers: [],

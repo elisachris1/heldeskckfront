@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { TechnicianCreateComponent } from './components/technician/technician-create/technician-create.component';
 import { TechnicianListComponent } from './components/technician/technician-list/technician-list.component';
+import { TechnicianUpdateComponent } from './components/technician/technician-update/technician-update.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -14,6 +15,8 @@ const routes: Routes = [
       {path:'home', component: HomeComponent},
       {path: 'technicians', component: TechnicianListComponent},
       {path: 'technicians/create', component: TechnicianCreateComponent},
+      {path: 'technicians/update', component: TechnicianUpdateComponent},
+
         
     ]
   }
