@@ -32,7 +32,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { TechnicianListComponent } from './components/technician/technician-list/technician-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
-import { timeout } from 'rxjs';
+
 
 @NgModule({
   declarations: [
@@ -66,11 +66,11 @@ import { timeout } from 'rxjs';
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
-      timeOut: 4000, 
-      closeButton: true,
-      progressBar: true
-    }      
-    )
+      timeOut:4000,
+    closeButton: true,
+    progressBar: true
+    }),
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
