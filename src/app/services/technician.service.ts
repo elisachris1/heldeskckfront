@@ -21,8 +21,8 @@ export class TechinicianService {
     return this.http.get<Technician[]>(`${API_CONFIG.baseUrl}/technicians`);
   }
 
-  create (Technician: Technician): Observable<Technician>{
-    return this.http.post<Technician>(`${API_CONFIG.baseUrl}/technicians`, Technician);
+  create (technician: Technician): Observable<Technician>{
+    return this.http.post<Technician>(`${API_CONFIG.baseUrl}/technicians`, technician);
   }
 
   update(techinician: Technician): Observable<Technician>{

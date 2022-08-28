@@ -34,6 +34,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { TechnicianListComponent } from './components/technician/technician-list/technician-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { TechnicianCreateComponent } from './components/technician/technician-create/technician-create.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ToastrModule } from 'ngx-toastr';
     HomeComponent,
     HeaderComponent,
     TechnicianListComponent,
-    LoginComponent
+    LoginComponent,
+    TechnicianCreateComponent
   ],
   imports: [
     BrowserModule,
