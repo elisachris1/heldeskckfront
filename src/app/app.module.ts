@@ -37,6 +37,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { TechnicianCreateComponent } from './components/technician/technician-create/technician-create.component';
 import { TechnicianUpdateComponent } from './components/technician/technician-update/technician-update.component';
 import {HttpBackend, HttpClientModule } from '@angular/common/http';
+import { TechnicianDeleteComponent } from './components/technician/technician-delete/technician-delete.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import {HttpBackend, HttpClientModule } from '@angular/common/http';
     LoginComponent,
     TechnicianCreateComponent,
     TechnicianUpdateComponent,
+    TechnicianDeleteComponent,
     
     
   ],
