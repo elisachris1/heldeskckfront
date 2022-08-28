@@ -14,23 +14,23 @@ export class TechinicianService {
   constructor(private http: HttpClient) { }
 
   findById(id: any): Observable<Technician>{
-    return this.http.get<Technician>(`${API_CONFIG.baseUrl}/Technicians/${id}`);
+    return this.http.get<Technician>(`${API_CONFIG.baseUrl}/technicians/${id}`);
   }
 
   findAll(): Observable<Technician[]> {
-    return this.http.get<Technician[]>(`${API_CONFIG.baseUrl}/Technicians`);
+    return this.http.get<Technician[]>(`${API_CONFIG.baseUrl}/technicians`);
   }
 
   create (Technician: Technician): Observable<Technician>{
-    return this.http.post<Technician>(`${API_CONFIG.baseUrl}/Technicians`, Technician);
+    return this.http.post<Technician>(`${API_CONFIG.baseUrl}/technicians`, Technician);
   }
 
   update(techinician: Technician): Observable<Technician>{
-    return this.http.put<Technician>(`${API_CONFIG.baseUrl}/Technicians/${techinician.id}`, techinician);
+    return this.http.put<Technician>(`${API_CONFIG.baseUrl}/technicians/${techinician.id}`, techinician);
   }
 
   delete(id: any): Observable<Technician>{
-    return this.http.delete<Technician>(`${API_CONFIG.baseUrl}/Technicians/${id}`);
+    return this.http.delete<Technician>(`${API_CONFIG.baseUrl}/technicians/${id}`);
 }
 
 }
