@@ -30,10 +30,11 @@ export class LoginComponent implements OnInit {
 
   logar(){
    
-    this.service.authenticate(this.creds).subscribe(response => {
+    this.service.authenticate(this.creds).subscribe(response =>{
       this.service.sucessfullLogin(response.headers.get('Authorization').substring(7));
-      this.router.navigate([''])      
-    }, () => {
+      this.router.navigate([''])    
+    },
+     () => {
       this.toast.error('User or/and password invalid');
     })
     

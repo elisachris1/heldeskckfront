@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-//import { JwtHelperService } from '@auth0/angular-jwt';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { API_CONFIG } from '../config/api.config';
 import { Credentials } from '../models/credencials';
-//import { API_CONFIG } from '../config/api.config';
 
 
 @Injectable({
@@ -11,7 +10,7 @@ import { Credentials } from '../models/credencials';
 })
 export class AuthService {
 
-  //jwtService: JwtHelperService = new JwtHelperService();
+  jwtService: JwtHelperService = new JwtHelperService();
 
   constructor(private http: HttpClient) { }
 
@@ -28,7 +27,7 @@ export class AuthService {
  isAuthenticated(){
   let token = localStorage.getItem('token')
   if(token != null){
-    //return !this.jwtService.isTokenExpired(token)
+    return !this.jwtService.isTokenExpired(token)
   }
   return false;
  }
