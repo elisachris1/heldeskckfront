@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
+import { CallListComponent } from './components/call/call-list/call-list.component';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
 import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
 import { clientListComponent } from './components/client/client-list/client-list.component';
@@ -28,7 +29,8 @@ const routes: Routes = [
       {path: 'clients/update', component: ClientUpdateComponent},
       {path: 'clients/delete', component: ClientDeleteComponent},
 
-        
+      {path: 'calls', component: CallListComponent},
+      
     ]
   }
 ];

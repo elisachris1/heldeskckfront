@@ -1,0 +1,76 @@
+<div class="container">
+
+    <h1>Call List</h1>
+  
+    <button routerLink="create" class="mat-elevation-z8" mat-stroked-button color="primary">New call</button>
+  
+    <mat-form-field appearance="standard">
+       <mat-label>Filter</mat-label>
+       <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+     </mat-form-field>
+  
+     <mat-radio-group color="primary">
+       <mat-radio-button (click)="orderByStatus(0)" value="0">OPEN</mat-radio-button>
+       <mat-radio-button (click)="orderByStatus(1)" value="1">ONGOING</mat-radio-button>
+       <mat-radio-button (click)="orderByStatus(2)" value="2">CLOSED</mat-radio-button>
+     </mat-radio-group>
+  
+    <div class="mat-elevation-z8">
+  
+       <table mat-table [dataSource]="dataSource">
+  
+          <ng-container matColumnDef="id">
+             <th mat-header-cell *matHeaderCellDef> ID </th>
+             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="title">
+             <th mat-header-cell *matHeaderCellDef> Title </th>
+             <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="client">
+             <th mat-header-cell *matHeaderCellDef> Client </th>
+             <td mat-cell *matCellDef="let element"> {{element.nameClient}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="technician">
+             <th mat-header-cell *matHeaderCellDef> Technician </th>
+             <td mat-cell *matCellDef="let element"> {{element.nameTechnician}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="openDate">
+             <th mat-header-cell *matHeaderCellDef> Open date </th>
+             <td mat-cell *matCellDef="let element"> {{element.openDate}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="priority">
+             <th mat-header-cell *matHeaderCellDef> Priority </th>
+             <td mat-cell *matCellDef="let element"> {{returnPriority(element.priority)}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="status">
+             <th mat-header-cell *matHeaderCellDef> Status </th>
+             <td mat-cell *matCellDef="let element"> {{returnStatus(element.status)}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="actions">
+             <th mat-header-cell *matHeaderCellDef> Actions </th>
+             <td mat-cell *matCellDef="let element">
+                <a routerLink="update/{{ element.id }}">
+                   <i class="material-icons edit">edit</i>
+                </a>
+                <a routerLink="read/{{ element.id }}">
+                   <i class="material-icons delete">visibility</i>
+                </a>
+             </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+       </table>
+  
+       <mat-paginator [pageSizeOptions]="[5, 2, 10, 20, 50, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+  
+  </div>
