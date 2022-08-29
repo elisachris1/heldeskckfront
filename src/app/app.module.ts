@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Imports for Angular Material components
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -38,6 +38,10 @@ import { TechnicianCreateComponent } from './components/technician/technician-cr
 import { TechnicianUpdateComponent } from './components/technician/technician-update/technician-update.component';
 import {HttpBackend, HttpClientModule } from '@angular/common/http';
 import { TechnicianDeleteComponent } from './components/technician/technician-delete/technician-delete.component';
+import { clientListComponent } from './components/client/client-list/client-list.component';
+import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
+import { ClientCreateComponent } from './components/client/client-create/client-create.component';
+import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
 
 
 @NgModule({
@@ -51,6 +55,12 @@ import { TechnicianDeleteComponent } from './components/technician/technician-de
     TechnicianCreateComponent,
     TechnicianUpdateComponent,
     TechnicianDeleteComponent,
+    clientListComponent,
+    ClientUpdateComponent,
+    ClientCreateComponent,
+    ClientDeleteComponent
+    
+
     
     
   ],
@@ -76,6 +86,9 @@ import { TechnicianDeleteComponent } from './components/technician/technician-de
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatInputModule,
     ToastrModule.forRoot({
       timeOut:4000,
     closeButton: true,
