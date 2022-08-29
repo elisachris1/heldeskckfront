@@ -8,9 +8,7 @@ import { Call } from '../models/call';
   providedIn: 'root'
 })
 export class CallService {
-  create(call: Call) {
-    throw new Error('Method not implemented.');
-  }
+  
   constructor(private http: HttpClient) { }
 
   findById(id:any):Observable<Call>{
@@ -21,6 +19,8 @@ export class CallService {
     return this.http.get<Call[]>(`${API_CONFIG.baseUrl}/calls`);
   }
 
-  
+  create(call: Call): Observable<Call>{
+    return this.http.post<Call>(`${API_CONFIG.baseUrl}/calls`, call);
+  }
   
 }
