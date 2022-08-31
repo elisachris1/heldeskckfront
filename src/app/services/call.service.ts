@@ -24,7 +24,7 @@ export class CallService {
   }
 
   update(call: Call): Observable<Call>{
-    return this.http.put<Call>(`${API_CONFIG.baseUrl}/calls/${call.id}`, call);
+   return this.http.put<Call>(`${API_CONFIG.baseUrl}/calls/${call.id}`, call);
   }
   
 }
